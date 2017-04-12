@@ -47,7 +47,17 @@ installutilitiesandcoms
 }
 
 function retrievefilesfromgit() {
-	[ ! -d /tmp/masquerade ] && mkdir -p /tmp/masquerade && echo -e "\e[0m(òÓ,)_\,,/retieving masquerade repository\e[32m\e[0m"
+	
+	
+if [ -d /tmp/masquerade ] ; then
+	echo -e "\e[0m(òÓ,)_\,,/\e[32m resetting install path\033[m"
+	rm -rf /tmp/masquerade
+	sleep 3
+	[ ! -d /tmp/masquerade ] && mkdir -p /tmp/masquerade 
+else
+[ ! -d /tmp/masquerade ] && mkdir -p /tmp/masquerade 
+fi
+echo -e "\e[0m(òÓ,)_\,,/\e[32m retreiving installation files\033[m"
 	cd /tmp/masquerade
 	git clone https://github.com/londondash/archVENOM.git /tmp/masquerade
 }
@@ -175,34 +185,44 @@ echo -e "\e[1;36m
 C O N F I G U R I N G  T H E  S Y S T E M\033[m"
 retrievefilesfromgit
 
+echo -e "\e[0m(òÓ,)_\,,/\e[32mi not afraid welcome to the masquerade\033[m"
+sleep 5
 
-sudo sh tmp/masquerade/masqueraderoot.sh
-
-
+sudo sh /tmp/masquerade/masqueraderoot.sh
 
 echo -e "\e[0m(òÓ,)_\,,/\e[32mconfiguring openbox\033[m"
-	mv ~/.config/openbox/autostart ~/.config/openbox/autostart.BU -i
-	mv /tmp/masquerade/autostart ~/.config//openbox/autostart
+	#mv ~/.config/openbox/autostart ~/.config/openbox/autostart.BU -i
+	#mv /tmp/masquerade/autostart ~/.config//openbox/autostart
 	
-	mv ~/.config/openbox/menu.xml ~/.config/openbox/menu.xml.BU -i
-	mv /tmp/masquerade/menu.xml ~/.config//openbox/menu.xml
+	#mv ~/.config/openbox/menu.xml ~/.config/openbox/menu.xml.BU -i
+	#mv /tmp/masquerade/menu.xml ~/.config//openbox/menu.xml
 	
 echo -e "\e[0m(òÓ,)_\,,/\e[32mconfiguring conky\033[m"
-	mv ~/.config/conky.conf ~/.config/conky.conf.silvaniteBU -i
-	#cd /tmp/masquerade
-	mv /tmp/masquerade/conky.conf ~/.config/conky.conf
-
-	
-
-
-
-
+	#mv ~/.config/conky.conf ~/.config/conky.conf.BU -i
+	#mv /tmp/masquerade/conky.conf ~/.config/conky.conf
 
 echo -e "\e[0m(òÓ,)_\,,/\e[32mconfiguring tint2\033[m"
+	#mv ~/.config/tint2/tint2rc ~/.config/tint2/tint2rc.BU -i
+	#mv /tmp/masquerade/tint2rc ~/.config/tint2/tint2rc
+
+
 echo -e "\e[0m(òÓ,)_\,,/\e[32mconfiguring bashrc\033[m"
+	#mv ~/.bashrc ~/bashrc.BU -i
+	#mv /tmp/masquerade/bashrc ~/.bashrc
+
 echo -e "\e[0m(òÓ,)_\,,/\e[32mconfiguring plank\033[m"
+	#mv ~/.config/plank/dock1/settings ~/.config/plank/dock1/settings.BU -i
+	#mv /tmp/masquerade/settings ~/.config/plank/dock1/settings
+
+
+
 echo -e "\e[0m(òÓ,)_\,,/\e[32mconfiguring light-lock\033[m"
 echo -e "\e[0m(òÓ,)_\,,/\e[32mconfiguring grub\033[m"
+
+	#mv /boot/grub/themes/Antergos-Default/background.png /boot/grub/themes/Antergos-Default/background.original.png -i
+	#mv /tmp/masquerade/grubbackground.png /boot/grub/themes/Antergos-Default/background.png
+
+
 echo -e "\e[0m(òÓ,)_\,,/\e[32mconfiguring gtk\033[m"
 
 systemcleanup
@@ -216,5 +236,5 @@ echo -e "\e[0m(òÓ,)_\,,/\e[32mconfiguring your system\033[m"
 }
 
 
-
-checkprivileges
+configurearchlinux
+#checkprivileges

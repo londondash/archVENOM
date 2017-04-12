@@ -2,7 +2,7 @@
 #Whether to show only windows of the current workspace.
 CurrentWorkspaceOnly=false
 #The size of dock icons (in pixels).
-IconSize=48
+IconSize=24
 #If 0, the dock won't hide.  If 1, the dock intelligently hides.  If 2, the dock auto-hides. If 3, the dock dodges active maximized windows.
 HideMode=1
 #Time (in ms) to wait before unhiding the dock.
@@ -12,7 +12,7 @@ Monitor=-1
 #List of *.dockitem files on this dock. DO NOT MODIFY
 DockItems=
 #The position for the dock on the monitor.  If 0, left.  If 1, right.  If 2, top.  If 3, bottom.
-Position=3
+Position=1
 #The dock's position offset from center (in percent).
 Offset=0
 #The name of the dock's theme to use.
