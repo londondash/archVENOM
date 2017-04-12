@@ -43,7 +43,7 @@
 		</item>
 		<item label="Web Browser">
 			<action name="Execute">
-				<execute>x-www-browser</execute>
+				<execute>firefox</execute>
 			</action>
 		</item>
 		<item label="System Cleaner">
@@ -111,6 +111,35 @@
 						<execute>
 							tintwizard.py
 						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="Preferences-433216" label="Conky Configuration">
+				<item label="Edit conky.conf">
+					<action name="Execute">
+						<execute>geany ~/..config/conky.conf</execute>
+					</action>
+				</item>
+				<separator/>
+				<item label="Conky Widget Manager">
+					<action name="Execute">
+						<execute>conky-manager</execute>
+					</action>
+				</item>
+				<separator/>
+				<item label="Restart Conky">
+					<action name="Execute">
+						<execute>conkyrestart</execute>
+					</action>
+				</item>
+				<item label="Start Conky">
+					<action name="Execute">
+						<execute>startconky</execute>
+					</action>
+				</item>
+				<item label="Close Conky">
+					<action name="Execute">
+						<execute>stopconky</execute>
 					</action>
 				</item>
 			</menu>
