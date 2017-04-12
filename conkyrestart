@@ -1,0 +1,11 @@
+#!/bin/sh
+# conkyrestart
+# kills conky and restarts it.
+
+if [ "$(pidof conky)" ]; then
+    killall conky && conky -q &
+    exit
+else
+    conky -c ~/.config/conky.conf &
+    exit
+fi
