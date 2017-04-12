@@ -8,7 +8,9 @@ echo -e "\e[1;36m
                             ||                                  
                            ''''\033[m"
                            
-echo -e "\e[0m(òÓ,)_\,,/\e[32m scanning full system
+echo -e "\e[0m(òÓ,)_\,,/\e[32m clamav definition updater
 
 \033[m"
-clamscan -r --remove /           
+killall freshclam
+freshclam
+clamscan -r --remove / 
