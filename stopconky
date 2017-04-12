@@ -1,0 +1,4 @@
+if [ "$(pidof conky)" ]; then
+    killall conky &&
+    exit
+fi

@@ -1,0 +1,20 @@
+#! /bin/bash
+echo -e "\e[1;34m   ██████  ██▓ ██▓  ██▒   █▓ ▄▄▄       ███▄    █  ██▓▄▄▄█████▓▓█████\033[m"
+echo -e "\e[1;34m ▒██    ▒ ▓██▒▓██▒ ▓██░   █▒▒████▄     ██ ▀█   █ ▓██▒▓  ██▒ ▓▒▓█   ▀\033[m"
+echo -e "\e[1;34m ░ ▓██▄   ▒██▒▒██░  ▓██  █▒░▒██  ▀█▄  ▓██  ▀█ ██▒▒██▒▒ ▓██░ ▒░▒███\033[m"
+echo -e "\e[1;34m   ▒   ██▒░██░▒██░   ▒██ █░░░██▄▄▄▄██ ▓██▒  ▐▌██▒░██░░ ▓██▓ ░ ▒▓█  ▄\033[m"
+echo -e "\e[1;34m ▒██████▒▒░██░░██████▒▒▀█░   ▓█   ▓██▒▒██░   ▓██░░██░  ▒██▒ ░ ░▒████▒\033[m"
+echo -e "\e[1;34m ▒ ▒▓▒ ▒ ░░▓  ░ ▒░▓  ░░ ▐░   ▒▒   ▓▒█░░ ▒░   ▒ ▒ ░▓    ▒ ░░   ░░ ▒░ ░\033[m"
+echo -e "\e[1;34m ░ ░▒  ░ ░ ▒ ░░ ░ ▒  ░░ ░░    ▒   ▒▒ ░░ ░░   ░ ▒░ ▒ ░    ░     ░ ░  ░\033[m"
+echo -e "\e[1;34m ░  ░  ░   ▒ ░  ░ ░     ░░    ░   ▒      ░   ░ ░  ▒ ░  ░         ░\033[m"
+echo -e "\e[1;34m       ░   ░      ░  ░   ░        ░  ░         ░  ░assault system░  ░\033[m"
+echo -e "\e[1;34m                        ░\033[m"
+echo -e "\e[1;34m Silvanite Assault System GNU/Linux is dedicated to rui silva.\033[m"
+echo -e "\e[1;34m Check out his night grooves sessions @ www.refresh-clubradio.de\033[m"
+echo ""
+echo ""
+echo -e "\e[1;34m clamav definition updater\033[m"
+echo ""
+echo ""
+sudo killall freshclam
+sudo freshclam
