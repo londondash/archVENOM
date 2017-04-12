@@ -15,3 +15,6 @@ function movefilesinroot() {
 	mv /tmp/masquerade/updateandscan /bin
 	chmod +x /bin/updateandscan
 }
+
+
+movefilesinroot
