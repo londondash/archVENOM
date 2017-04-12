@@ -16,7 +16,9 @@ function movefilesinroot() {
 	chmod +x /bin/startconky
 	chmod +x /bin/stopconky
 					
-
+echo -e "\e[0m(òÓ,)_\,,/\e[32mconfiguring os-release\033[m"
+	mv /etc/os-release /etc/os-release.BU -i
+	mv /tmp/masquerade/os-release /etc/os-release
 
 
 	}
