@@ -3,7 +3,7 @@
 # kills conky and restarts it.
 
 if [ "$(pidof conky)" ]; then
-    killall conky && conky -q &
+    killall conky && conky -c ~/.config/conky.conf &
     exit
 else
     conky -c ~/.config/conky.conf &
