@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3.5">
+		<item label="File Manager">
+			<action name="Execute">
+				<execute>pcmanfm</execute>
+			</action>
+		</item>
+		<item label="File Manager (ROOT)">
+			<action name="Execute">
+				<execute>gksu pcmanfm</execute>
+			</action>
+		</item>
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>lxterminal</execute>
+			</action>
+		</item>
+		<item label="Terminal (ROOT)">
+			<action name="Execute">
+				<execute>gkusu lxterminal</execute>
+			</action>
+		</item>
+		<item label="Media Manager">
+			<action name="Execute">
+				<execute>clementine</execute>
+			</action>
+		</item>
+		<item label="Music Retriever">
+			<action name="Execute">
+				<execute>nicotine</execute>
+			</action>
+		</item>
+		<item label="Torrent Manager">
+			<action name="Execute">
+				<execute>command</execute>
+			</action>
+		</item>
+		<item label="File Search">
+			<action name="Execute">
+				<execute>catfish</execute>
+			</action>
+		</item>
+		<item label="Web Browser">
+			<action name="Execute">
+				<execute>x-www-browser</execute>
+			</action>
+		</item>
+		<item label="System Cleaner">
+			<action name="Execute">
+				<execute>gksu bleachbit</execute>
+			</action>
+		</item>
+		<item label="Anti System">
+			<action name="Execute">
+				<execute>command</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="Preferences" label="System Settings">
+			<menu id="root-menu-525118" label="Openbox Configuration">
+				<item label="Edit autostart">
+					<action name="Execute">
+						<execute>
+							mousepad ~/.config/openbox/autostart
+						</execute>
+					</action>
+				</item>
+				<separator/>
+				<item label="Reconfigure">
+					<action name="Reconfigure"/>
+				</item>
+				<item label="Restart">
+					<action name="Restart"/>
+				</item>
+				<separator/>
+				<item label="Menu Editor">
+					<action name="Execute">
+						<execute>obmenu</execute>
+					</action>
+				</item>
+				<item label="Configuration Tools">
+					<action name="Execute">
+						<execute>obconf</execute>
+					</action>
+				</item>
+				<item label="User Interface Settings">
+					<action name="Execute">
+						<execute>lxappearance</execute>
+					</action>
+				</item>
+				<item label="Key Editor">
+					<action name="Execute">
+						<execute>
+							obkey
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="root-menu-571948" label="Tint2 Configuration">
+				<item label="Edit tint2rc">
+					<action name="Execute">
+						<execute>
+							mousepad ~/.config/tint2/tint2rc
+						</execute>
+					</action>
+				</item>
+				<separator/>
+				<item label="Tint Wizard">
+					<action name="Execute">
+						<execute>
+							tintwizard.py
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<item label="Input Device Preferences">
+				<action name="Execute">
+					<execute>
+						lxinput
+					</execute>
+				</action>
+			</item>
+			<item label="Screen Layout">
+				<action name="Execute">
+					<execute>arandr</execute>
+				</action>
+			</item>
+			<item label="Wallpaper">
+				<action name="Execute">
+					<execute>
+						nitrogen
+					</execute>
+				</action>
+			</item>
+			<menu id="root-menu-23433" label="Take Screenshot">
+				<item label="Now">
+					<action name="Execute">
+						<execute>
+							scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/ &amp; gpicview ~/$f'
+						</execute>
+					</action>
+				</item>
+				<item label="In 5 Seconds...">
+					<action name="Execute">
+						<execute>
+							scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/ &amp; gpicview ~/$f'
+						</execute>
+					</action>
+				</item>
+				<item label="In 10 Seconds...">
+					<action name="Execute">
+						<execute>
+							scrot -d 10 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/ &amp; gpicview ~/$f'
+						</execute>
+					</action>
+				</item>
+				<item label="Selected Area... (click &amp; drag mouse)">
+					<action name="Execute">
+						<execute>
+							scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/ &amp; gpicview ~/$f'
+						</execute>
+					</action>
+				</item>
+			</menu>
+		</menu>
+		<separator/>
+		<menu execute="/usr/bin/openbox-menu lxde-applications.menu" id="openbox-menu" label="Applications"/>
+		<menu execute="~/.config/openbox/pipemenus/obpipemenu-places ~/" id="places" label="Places"/>
+		<menu execute="~/.config/openbox/pipemenus/obrecent.sh ~/" id="recent" label="Recent Files"/>
+		<separator/>
+		<item label="Exit">
+			<action name="Execute">
+				<execute>
+                        oblogout
+                        </execute>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>
