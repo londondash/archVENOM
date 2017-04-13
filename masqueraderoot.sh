@@ -34,10 +34,10 @@ wget https://dl.opendesktop.org/api/files/download/id/1460768450/163320-Dyna_Bla
 wget https://dl.opendesktop.org/api/files/download/id/1460769078/165646-Nightmare.zip
          unzip 165646-Nightmare.zip -d /usr/share/themes
 rm /usr/share/themes/Kurosaki.jpg
-configurearchlinux
+removeuglyobthemes
 else
 echo -e "\e[0m┌∩┐(✖╭╮✖)┌∩┐\e[91m skipping openbox themes installation\033[m"
-configurearchlinux
+removeuglyobthemes
 fi
 }
 
@@ -56,11 +56,13 @@ rm -rf /usr/share/themes/ZOMG-PONIES!
 rm -rf /usr/share/icons/Numix-Light
 rm -rf /usr/share/icons/Numix-Square
 rm -rf /usr/share/icons/Numix-Square-Light
+removeunwantedsoftware
 }
 
 function removeunwantedsoftware() {
 	echo -e "\e[0m(òÓ,)_\,,/\e[32mremoving undesired software\033[m"
 	pacman -R xfburn pidgin transmission-gtk pragha gnome-mplayer galculator --noconfirm
+	installwallpapers
 }
 
 function installwallpapers() {
